@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="player hide">
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+      </div>
+      <div class="player-track-name"></div>
+      <div class="player-timeline">
+        <div class="player-progress"></div>
+      </div>
+      <div class="player-time">
+        <div class="time-current">0:00</div>
+        <div class="time-divider">/</div>
+        <div class="time-length"></div>
+      </div>
+      <div class="player-volume">
+        <div class="volume-button">
+          <div class="volume icon-volume-on"></div>
+        </div>
+        <div class="volume-slider">
+          <div class="volume-percentage"></div>
+        </div>
+      </div>
+      <ul class="playlist"></ul>
+    </div>
+    <div class="weather hide">
+      <input type="text" class="city" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <div class="time hide">9:00</div>
+    <div class="date hide"></div>
+    <div class="greeting-container hide">
+      <span class="greeting"></span>
+      <input type="text" class="name">
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-left-wrapper">
+      <a href="https://github.com/brazhik" target="_blank">
+        <div class="github"></div>
+      </a>
+      <a href="https://rs.school/js/" target="_blank">
+        <div class="rsschool"></div>
+      </a>
+      <div class="year">2022</div>
+      <div class="settings"></div>
+    </div>
+    <div class="quote-wrapper hide">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+    <div class="todo-wrapper hide">
+      <div class="todo">Todo</div>
+    </div>
+  </footer>
+
+  <div class="settings-window">
+    <div class="settings-window-header">
+      <div class="settings-window-header-empty"></div>
+      <div class="settings-title"></div>
+      <div class="settings-window-close-button"></div>
+    </div>
+    <div class="language">
+      <div class="language-title"></div>
+      <div class="language-settings">
+        <input id="language-en-radio" type="radio" name="language">
+        <label class="language-en" for="language-en-radio"></label>
+        <input id="language-ru-radio" type="radio" name="language">
+        <label class="language-ru" for="language-ru-radio"></label>
+      </div>
+    </div>
+    <div class="photo-source">
+      <div class="photo-source-title"></div>
+      <div class="photo-source-settings">
+        <div>
+          <input id="photo-source-github-radio" type="radio" name="photo-source">
+          <label for="photo-source-github-radio">GitHub</label>
+        </div>
+        <div>
+          <input id="photo-source-unsplash-radio" type="radio" name="photo-source">
+          <label for="photo-source-unsplash-radio">Unsplash API</label>
+        </div>
+        <div>
+          <input id="photo-source-flickr-radio" type="radio" name="photo-source">
+          <label for="photo-source-flickr-radio">Flickr API</label>
+        </div>
+        <div class="photo-source-tags">
+          <label class="photo-source-tags-label" for="photo-source-tags-input"></label>
+          <input class="photo-source-tags-input" id="photo-source-tags-input" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="blocks">
+      <div class="blocks-title"></div>
+      <div class="blocks-settings">
+        <div>
+          <input id="blocks-time-checkbox" type="checkbox">
+          <label class="blocks-time" for="blocks-time-checkbox"></label>
+        </div>
+        <div>
+          <input id="blocks-date-checkbox" type="checkbox">
+          <label class="blocks-date" for="blocks-date-checkbox"></label>
+        </div>
+        <div>
+          <input id="blocks-greeting-checkbox" type="checkbox">
+          <label class="blocks-greeting" for="blocks-greeting-checkbox"></label>
+        </div>
+        <div>
+          <input id="blocks-quote-checkbox" type="checkbox">
+          <label class="blocks-quote" for="blocks-quote-checkbox"></label>
+        </div>
+        <div>
+          <input id="blocks-weather-checkbox" type="checkbox">
+          <label class="blocks-weather" for="blocks-weather-checkbox"></label>
+        </div>
+        <div>
+          <input id="blocks-audioplayer-checkbox" type="checkbox">
+          <label class="blocks-audioplayer" for="blocks-audioplayer-checkbox"></label>
+        </div>
+        <div>
+          <input id="blocks-todo-checkbox" type="checkbox">
+          <label class="blocks-todo" for="blocks-todo-checkbox"></label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="todo-window">
+    <div class="todo-window-header">
+      <div class="todo-window-header-empty"></div>
+      <div class="todo-title"></div>
+      <div class="todo-window-close-button"></div>
+    </div>
+    <ul class="todo-list">
+      <li class="todo-item-template">
+        <div>
+          <input class="todo-item-checkbox" id="todo-item-checkbox" type="checkbox">
+          <label class="todo-item-text" for="todo-item-checkbox">Example</label>
+        </div>
+        <div class="todo-item-trash"></div>
+      </li>
+    </ul>
+    <div class="todo-input-wrapper">
+      <input class="todo-input" type="text">
+      <div class="todo-create-new"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html>
